@@ -1,2 +1,2 @@
-# web
-All the non-private websites and web apps I build will be here
+# hexfinity
+Generate a random HEX and copy it to your clipboard with the click of a button
