@@ -1,0 +1,37 @@
+body {
+  height: 100vh;
+  margin:0;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+input {
+  text-align: center;
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  border: 1px solid white;
+  border-right: none;
+  border-radius: 7px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 10px;
+  font-family: Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  outline: none;
+}
+button {
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  border: 1px solid white;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: 14px;
+  outline: none;
+  transition: background-color 0.3s, color 0.3s, padding 0.3s;
+}
+button:active {
+  background-color: orange;
+  color: black;
+  padding: 40px;
+}
