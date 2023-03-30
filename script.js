@@ -13,17 +13,23 @@ function changeColor() {
     hex = hex + hexNumbers[random]
   }
 
-  input.addEventListener("click", function() {
-    event.stopPropagation()
-  })
-
-  button.addEventListener("click", function() {
-    event.stopPropagation()
+  button.addEventListener("click", e => {
+    e.stopPropagation()
     input.select()
-    document.execCommand("copy")
+    navigator.clipboard.writeText(input.value)
+      .then(() => {
+        console.log("Copied to clipboard:", input.value)
+      })
+      .catch((err) => {
+        console.error("Failed to copy:", err)
+      })
     input.blur()
   })
 
   body.style.backgroundColor = hex
   input.value = hex
 }
+
+window.addEventListener("load", function() {
+  this.alert("Click anywhere on the page to change colour!")
+})
